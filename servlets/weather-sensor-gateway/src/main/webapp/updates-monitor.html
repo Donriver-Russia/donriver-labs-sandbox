@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+<div>
+    <p>Below you can see updates:</p>
+
+    <div id="updateScreen"></div>
+    <script type="text/javascript">
+
+    if(typeof(EventSource)!=="undefined")
+      {
+      var source=new EventSource("http://localhost:8080/weather-sensor-gateway/listen-updates");
+      source.onmessage=function(event)
+        {
+            var data=JSON.parse(event.data);
+            document.getElementById("updateScreen").innerHTML += "<div>Location ["+data.latitude+","+data.longitude+"]" + data.locationName+ " has sent data</div>";
+        };
+      }
+    else
+      {
+      document.getElementById("updateScreen").innerHTML="Sorry, your browser does not support server-sent events...";
+      }
+    </script>
+</div>
+</body>
+</html>
