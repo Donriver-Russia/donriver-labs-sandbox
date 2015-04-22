@@ -3,7 +3,7 @@
  * Created on: 23.03.15
  * Created by: Alexey Lugovoy
  */
-package com.donriver.labs.server.sockets;
+package com.donriver.labs.sandbox.sockets;
 
 import java.io.BufferedReader;
 import java.io.IOException;
