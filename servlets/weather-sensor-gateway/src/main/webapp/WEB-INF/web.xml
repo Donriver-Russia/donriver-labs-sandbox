@@ -4,4 +4,16 @@
 	      http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd"
          version="3.0" metadata-complete="false">
     <display-name>Weather sensor gateway</display-name>
+
+<!--
+    <servlet-mapping>
+        <servlet-name>GatewayServlet</servlet-name>
+        <url-pattern>/sensor-readings</url-pattern>
+    </servlet-mapping>
+    <servlet>
+        <display-name>GatewayServlet</display-name>
+        <servlet-name>GatewayServlet</servlet-name>
+        <servlet-class>com.donriver.labs.sandbox.servlets.weather.gateway.servlets.GatewayServlet</servlet-class>
+    </servlet>
+-->
 </web-app>
